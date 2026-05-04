@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<div class="dashboard-header">
+    <h2>Dashboard</h2>
+</div>
+<p>Welcome, <strong>{{ current_user.username }}</strong>!</p>
+<p style="margin-top:0.5rem; color:#666;">Email: {{ current_user.email }}</p>
+<a href="{{ url_for('logout') }}" class="btn btn-danger" style="margin-top:1.5rem;">Logout</a>
+{% endblock %}
